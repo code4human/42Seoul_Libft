@@ -6,32 +6,31 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 05:23:01 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/06 06:47:07 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/06 08:32:50 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 /*
 ** [PROTOTYPE]
 ** #include <string.h>
-** void		*memset(void *s, int c, size_t n);
+** void		*memset(void *b, int c, size_t len);
 */
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	char_c;
 	size_t			i;
 
 	char_c = c;
 	i = 0;
-	while (i < n)
+	while (i < len)
 	{
-		((unsigned char*)s)[i] = char_c;
+		((unsigned char*)b)[i] = char_c;
 		i++;
 	}
-	return (s);
+	return (b);
 }
 
 /*
