@@ -17,26 +17,30 @@
 ** [PROTOTYPE]
 ** #include <string.h>
 ** size_t  strlcat(char *dst, const char *src, size_t dstsize);
+**
+** [WARNING]
+** The "restrict" qualifier is part of the c99 standard.
+** It is therefore forbidden to include it in your prototypes and 
+** to compile it with the flag -std=c99. 
 */
 
 size_t  ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t i;
-	size_t d;
-	size_t dst_init_len;
-	size_t src_len;
+	size_t init_dstsize;
+	size_t srcsize;
 
-	dst_init_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
+	init_dstsize = ft_strlen(dst);
+	srcsize = ft_strlen(src);
+
 	i = 0;
-	d = dst_init_len;
-	while (i <= dstsize - 1)
+	while ((i < srcsize) & (init_dstsize + i < dstsize - 1))
 	{
-		dst[d + i] = src[i];
+		dst[init_dstsize + i] = src[i];
 		i++;
 	}
-	dst[dstsize] = '\0';
-	return (dst_init_len + src_len);
+	dst[init_dstsize + i] = '\0';
+	return (init_dstsize + srcsize);
 }
 
 int		main(void)
