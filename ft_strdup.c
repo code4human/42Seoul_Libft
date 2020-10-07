@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
+
 /*
 ** [PROTOTYPE]
 ** #include <string.h>
@@ -20,13 +20,32 @@
 
 char	*ft_strdup(const char *s1)
 {
+	size_t	i;
+	size_t	len;
+	char	*s2;
 
-
+	len = ft_strlen(s1);
+	s2 = (char *)malloc(sizeof(char) * (len + 1));
+	
+	i = 0;
+	if (!(s2))
+		return (NULL);
+	while (i < len)
+	{
+		s2[i] = s1[i];
+		i++;
+	}
+	s2[i] = '\0';
+	return (s2);
+	
 }
 
-int	main(void)
-{
-	printf("size of size_t : %lu\n", sizeof(size_t));
-	printf("size of unsigned int : %lu\n", sizeof(unsigned int));
-	printf("size of int : %lu\n", sizeof(int));
-}
+/*
+**int	main(void)
+**{
+**	printf("====ft_strdup====\n");
+**	printf("%s\n", ft_strdup("42Seoul"));
+**	printf("====strdup====\n");	
+**	printf("%s\n", strdup("42Seoul"));
+**}
+*/

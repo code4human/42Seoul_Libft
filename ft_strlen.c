@@ -22,6 +22,7 @@ size_t	ft_strlen(const char *s)
 {
 	size_t i;
 
+	i = 0;
 	while (*s != '\0')
 	{
 		i++;
@@ -29,3 +30,14 @@ size_t	ft_strlen(const char *s)
 	}
 	return (i);
 }
+
+/*
+**int	main(void)
+**{
+**	printf("====ft_strlen====\n");
+**	printf("%ld\n", ft_strlen("42Seoul"));
+**	printf("====strlen====\n");
+**	printf("%ld\n", strlen("42Seoul"));
+**	return (0);
+**}
+*/
