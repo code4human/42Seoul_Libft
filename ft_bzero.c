@@ -6,12 +6,12 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 05:34:26 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/04 05:35:39 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/06 07:08:12 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include <strings.h>
 /*
 ** [PROTOTYPE] 
 ** #include <strings.h>
@@ -20,4 +20,29 @@
 
 void	ft_bzero(void *s, size_t n)
 {
+	unsigned char	*char_s;
+	unsigned char	char_c;
+	size_t			i;
+
+	char_c = '\0';
+	char_s = s;
+	i = 0;
+	while (i < n)
+	{
+		char_s[i] = 0;
+		i++;
+	}
+}
+
+int		main(void)
+{
+	char chars1[10] = "Born2Code";
+	char chars2[10] = "Born2Code";
+
+	printf("====ft_bzero====\n");
+	ft_bzero(chars1, sizeof(chars1)-1);
+	printf("%s\n", chars1);
+	printf("====bzero====\n");
+	bzero(chars2, sizeof(chars2)-1);
+	printf("%s\n", chars2);
 }
