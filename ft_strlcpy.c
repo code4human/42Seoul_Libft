@@ -6,12 +6,11 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 03:03:05 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/01 09:16:38 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/08 05:50:51 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 /*
 ** [PROTOTYPE]
@@ -42,16 +41,18 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (srcsize);
 }
 
-int		main(void)
-{
-	char chararray1[20];
-	char chararray2[20];
-
-	printf("====ft_strlcpy====\n");
-	printf("%ld\n", ft_strlcpy(chararray1, "abcdefghij", sizeof(chararray1)));
-	printf("%s\n", chararray1);
-	printf("====strlcpy====\n");
-	printf("%d\n", strlcpy(chararray2, "abcdefghij", sizeof(chararray2)));
-	printf("%s\n", chararray2);
-	return (0);
-}
+/*
+**int		main(void)
+**{
+**	char chararray1[20];
+**	char chararray2[20];
+**
+**	printf("====ft_strlcpy====\n");
+**	printf("%lu\n", ft_strlcpy(chararray1, "abcdefghij", sizeof(chararray1)));
+**	printf("%s\n", chararray1);
+**	printf("====strlcpy====\n");
+**	printf("%lu\n", strlcpy(chararray2, "abcdefghij", sizeof(chararray2)));
+**	printf("%s\n", chararray2);
+**	return (0);
+**}
+*/
