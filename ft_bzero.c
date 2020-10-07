@@ -21,10 +21,8 @@
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*char_s;
-	unsigned char	char_c;
 	size_t			i;
 
-	char_c = '\0';
 	char_s = s;
 	i = 0;
 	while (i < n)
@@ -34,15 +32,17 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-int		main(void)
-{
-	char chars1[10] = "Born2Code";
-	char chars2[10] = "Born2Code";
-
-	printf("====ft_bzero====\n");
-	ft_bzero(chars1, sizeof(chars1)-1);
-	printf("%s\n", chars1);
-	printf("====bzero====\n");
-	bzero(chars2, sizeof(chars2)-1);
-	printf("%s\n", chars2);
-}
+/*
+**int		main(void)
+**{
+**	char chars1[10] = "Born2Code";
+**	char chars2[10] = "Born2Code";
+**
+**	printf("====ft_bzero====\n");
+**	ft_bzero(chars1, sizeof(chars1)-1);
+**	printf("%s\n", chars1);
+**	printf("====bzero====\n");
+**	bzero(chars2, sizeof(chars2)-1);
+**	printf("%s\n", chars2);
+**}
+*/
