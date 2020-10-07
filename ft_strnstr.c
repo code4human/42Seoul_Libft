@@ -6,12 +6,12 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 14:24:15 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/07 14:24:18 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/08 08:32:44 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
+
 /*
 ** [PROTOTYPE]
 ** #include <string.h>
@@ -31,10 +31,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	while ((haystack[i] != '\0') && (i < len))
 	{
 		j = 0;
-		while ((haystack[i] == needle[j]) && (i + j < len))
+		while ((haystack[i + j] == needle[j]) && (i + j < len))
 		{
 			if (j == needle_len - 1)
-				return (haystack[i]);
+				return ((char *)(haystack + i));
 			j++;
 		}
 		i++;
@@ -42,10 +42,12 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
 
-int	main(void)
-{
-	printf("====ft_strnstr====\n");
-	printf("%s\n%p\n", ft_strnstr("42Seoul", "Seoul", 5), ft_strnstr("42Seoul", "Cadet", 5));
-	printf("====strnstr====\n");
-	printf("%s\n%p\n", strnstr("42Seoul", "Seoul", 5), strnstr("42Seoul", "Cadet", 5));
-}
+/*
+**int	main(void)
+**{
+**	printf("====ft_strnstr====\n");
+**	printf("%s\n%p\n", ft_strnstr("42Seoul", "Seoul", 13), ft_strnstr("42Seoul", "Cadet", 13));
+**	printf("====strnstr====\n");
+**	printf("%s\n%p\n", strnstr("42Seoul", "Seoul", 13), strnstr("42Seoul", "Cadet", 13));
+**}
+*/
