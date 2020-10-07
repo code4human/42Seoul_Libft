@@ -27,16 +27,19 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t i;
+	size_t srcsize;
 
+	srcsize = ft_strlen(src);
 	i = 0;
-	while (i <= dstsize - 1)
+	while ((i < srcsize) && (i <= dstsize - 1))
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	dst[dstsize] = '\n';
+	if (!(dstsize))
+		dst[dstsize] = '\n';
 
-	return (ft_strlen(src));
+	return (srcsize);
 }
 
 int		main(void)
@@ -45,9 +48,10 @@ int		main(void)
 	char chararray2[20];
 
 	printf("====ft_strlcpy====\n");
-	printf("%zd\n", ft_strlcpy(chararray1, "abcdefghij", sizeof(chararray1)));
+	printf("%ld\n", ft_strlcpy(chararray1, "abcdefghij", sizeof(chararray1)));
 	printf("%s\n", chararray1);
 	printf("====strlcpy====\n");
-	printf("%zd\n", strlcpy(chararray2, "abcdefghij", sizeof(chararray2)));
+	printf("%d\n", strlcpy(chararray2, "abcdefghij", sizeof(chararray2)));
 	printf("%s\n", chararray2);
-	return (0);}
+	return (0);
+}
