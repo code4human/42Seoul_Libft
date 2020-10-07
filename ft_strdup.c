@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include <string.h>
 /*
 ** [PROTOTYPE]
 ** #include <string.h>
@@ -21,4 +21,12 @@
 char	*ft_strdup(const char *s1)
 {
 
+
+}
+
+int	main(void)
+{
+	printf("size of size_t : %lu\n", sizeof(size_t));
+	printf("size of unsigned int : %lu\n", sizeof(unsigned int));
+	printf("size of int : %lu\n", sizeof(int));
 }
