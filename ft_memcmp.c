@@ -6,16 +6,19 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 06:15:52 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/10 06:16:00 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/10 07:23:16 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
+
 /*
 ** [PROTOTYPE]
 ** #include <string.h>
 ** int memcmp(const void *s1, const void *s2, size_t n);
+**
+** [WARNING]
+** The memcmp() returns actually 1, 0, -1.
 */
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
@@ -39,13 +42,13 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 
-int	main(void)
-{
-	printf("====The memcmp() returns");
-	
-	printf("====ft_memcmp====\n");
-	printf("%d\n", ft_memcmp("42", "Seoul", 2));
-	printf("====memcmp====\n");
-	printf("%d\n", memcmp("42", "Seoul", 2));
-	return (0);
-}
+/*
+**int	main(void)
+**{
+**	printf("====ft_memcmp====\n");
+**	printf("%d\n", ft_memcmp("42", "Seoul", 2));
+**	printf("====memcmp====\n");
+**	printf("%d\n", memcmp("42", "Seoul", 2));
+**	return (0);
+**}
+*/
