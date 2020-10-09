@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
+
 /*
 ** [PROTOTYPE]
 ** #include <string.h>
@@ -28,21 +28,19 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (char_s[i] == (unsigned char)c)
-			return (s + i);
+			return (void *)(s + i);
 		i++;
 	}
 	return (NULL);
 }
 
-
-int   main(void)
-{
-	char    chararray1[20];
-	char    chararray2[20];
-
-	printf("====ft_memchr====\n");
-	printf("%s\n%p\n", chararray1, ft_memchr("42Cadet", 101, sizeof(chararray1)));
-	printf("====memchr====\n");
-	printf("%s\n%p\n", chararray2, memchr("42Cadet", 101, sizeof(chararray2)));
-	return (0);
-}
+/*
+**int   main(void)
+**{
+**	printf("====ft_memchr====\n");
+**	printf("%p\n", ft_memchr("42Cadet", 67, 6));
+**	printf("====memchr====\n");
+**	printf("%p\n", memchr("42Cadet", 67, 6));
+**	return (0);
+**}
+*/
