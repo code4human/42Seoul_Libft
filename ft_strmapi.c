@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 06:18:50 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/10 06:18:55 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/13 06:11:51 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@
 ** char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 */
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
 	unsigned int	s_len;
-	char		*result;
+	char			*result;
 
 	if ((s == NULL) || (f == NULL))
 		return (NULL);
 	s_len = ft_strlen(s);
-	if(!(result = (char *)malloc(sizeof(char) * (s_len + 1))))
+	if (!(result = (char *)malloc(sizeof(char) * (s_len + 1))))
 		return (NULL);
 	i = 0;
 	while (s[i])

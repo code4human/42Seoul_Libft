@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 14:22:26 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/07 14:22:33 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/13 06:30:15 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,16 @@
 **
 ** [WARNING]
 ** The "restrict" qualifier is part of the c99 standard.
-** It is therefore forbidden to include it in your prototypes and 
-** to compile it with the flag -std=c99. 
+** It is therefore forbidden to include it in your prototypes and
+** to compile it with the flag -std=c99.
 */
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void				*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*char_dst;
 	unsigned char	*char_src;
 
-	
 	char_dst = (unsigned char *)dst;
 	char_src = (unsigned char *)src;
 	i = 0;
@@ -48,9 +47,11 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 **	char	chararray2[20];
 **
 **	printf("====ft_memcpy====\n");
-**	printf("%s\n%p\n", chararray1, ft_memcpy(chararray1, "1234567", sizeof(chararray1)));
+**	printf("%s\n%p\n", chararray1,
+**				ft_memcpy(chararray1, "1234567", sizeof(chararray1)));
 **	printf("====memcpy====\n");
-**	printf("%s\n%p\n", chararray2, memcpy(chararray2, "1234567", sizeof(chararray2)));
+**	printf("%s\n%p\n", chararray2,
+**				memcpy(chararray2, "1234567", sizeof(chararray2)));
 **	return (0);
 **}
 */

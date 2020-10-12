@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: taeekim <taeekim>                          +#+  +:+       +#+        */
+/*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 12:41:29 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/04 12:42:50 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/13 05:58:30 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 ** void		*calloc(size_t count, size_t size);
 */
 
-void	*ft_calloc(size_t count, size_t size)
+void				*ft_calloc(size_t count, size_t size)
 {
-	size_t		i;
-	void		*res;
+	size_t			i;
+	void			*res;
 	unsigned char	*char_res;
 
 	res = malloc(count * size);

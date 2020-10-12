@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 14:22:47 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/07 14:22:50 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/13 06:27:08 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@
 ** to compile it with the flag -std=c99.
 */
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void				*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*char_dst;
 	unsigned char	*char_src;
 

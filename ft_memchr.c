@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 14:23:02 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/07 14:23:05 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/13 06:27:23 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 ** void	*memchr(const void *s, int c, size_t n);
 */
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void				*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t		i;
+	size_t			i;
 	unsigned char	*char_s;
 
 	char_s = (unsigned char *)s;
