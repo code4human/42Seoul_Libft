@@ -29,7 +29,7 @@ static	bool	ft_is_occur(char const *set, char const c)
 	i = 0;
 	while (set[i])
 	{
-		if (c == set[i])
+		if (set[i] == c)
 			return (true);
 		i++;
 	}
@@ -57,8 +57,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	s2 = (char *)malloc(sizeof(char) * ((len - 1) - i) + 1);
 	if (!(s2))
 		return (NULL);
-	ft_strlcpy(s2, s1, (len - 1) - i);
-	s2[(len - 1) + i] = '\0';
+	ft_strlcpy(s2, (s1 + i) , (len - 1) - i + 1);
 	return (s2);
 }
 
@@ -66,8 +65,8 @@ int	main(void)
 {
 	printf("====ft_strtrim====\n");
 	printf("====BCDEF====\n");
-	printf("%s", ft_strtrim("ABCDEF", "EAC"));
+	printf("%s\n", ft_strtrim("ABCDEF", "EAC"));
 	printf("====BCD====\n");
-	printf("%s", ft_strtrim("ABCDEF", "AFE"));
+	printf("%s\n", ft_strtrim("ABCDEF", "AFE"));
 	return (0);
 }
