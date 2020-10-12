@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 06:17:41 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/13 06:58:48 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/13 07:10:32 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,8 @@ static char		*ft_word_cpy(char *word, size_t word_len,
 	return (word);
 }
 
-static char		**ft_word_malloc(char **result, size_t n_break,
-					char const *s, char c)
+static char		**ft_word_malloc(char **result,
+				size_t n_break, char const *s, char c)
 {
 	size_t		idx2;
 	size_t		idx1;
@@ -88,11 +88,8 @@ static char		**ft_word_malloc(char **result, size_t n_break,
 		while (s[idx1] && s[idx1] == c)
 			idx1++;
 		pre_idx1 = idx1;
-		while (s[idx1] && s[idx1] != c)
-		{
-			idx1++;
+		while (s[idx1] && s[idx1++] != c)
 			word_len++;
-		}
 		if (!(result[idx2] = (char *)malloc(sizeof(char) * (word_len + 1))))
 			return (ft_malloc_error(result));
 		ft_word_cpy(result[idx2], word_len, s, pre_idx1);
