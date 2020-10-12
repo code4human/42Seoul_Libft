@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 06:17:41 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/13 06:09:32 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/13 06:42:49 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ static char		**ft_word_malloc(char **result, size_t n_break, char const *s, char
 	return (result);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	size_t	n_break;
 	char	**result;

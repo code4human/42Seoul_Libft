@@ -6,14 +6,14 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 05:34:26 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/06 07:08:12 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/13 06:40:42 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <strings.h>
+
 /*
-** [PROTOTYPE] 
+** [PROTOTYPE]
 ** #include <strings.h>
 ** void		bzero(void *s, size_t n);
 */

@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 14:23:42 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/07 14:23:44 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/13 06:38:25 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,11 @@ char	*ft_strchr(const char *s, int c)
 **	// Search the location of character 'e' (decimal 101 on ascii)
 **	// Check the address if the return value is NULL pointer
 **	printf("====ft_strchr====\n");
-**	printf("%s\n%p\n", ft_strchr("42Seoul_Cadet", 101), ft_strchr("42Seoul_Cadet", 5));
+**	printf("%s\n%p\n", ft_strchr("42Seoul_Cadet", 101),
+**				ft_strchr("42Seoul_Cadet", 5));
 **	printf("====strchr====\n");
-**	printf("%s\n%p\n", strchr("42Seoul_Cadet", 101), strchr("42Seoul_Cadet", 5));
+**	printf("%s\n%p\n", strchr("42Seoul_Cadet", 101),
+**				strchr("42Seoul_Cadet", 5));
 **	return (0);
 **}
 */

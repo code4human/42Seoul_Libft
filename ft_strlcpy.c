@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 03:03:05 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/08 06:16:40 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/13 06:39:51 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,13 @@
 /*
 ** [PROTOTYPE]
 ** #include <string.h>
-** size_t	strlcpy(char *restrict dst, const char *restrict src, size_t dstsize);
+** size_t	strlcpy(char *restrict dst, 
+**					const char *restrict src, size_t dstsize);
 **
 ** [WARNING]
 ** The "restrict" qualifier is part of the c99 standard.
-** It is therefore forbidden to include it in your prototypes and 
-** to compile it with the flag -std=c99. 
+** It is therefore forbidden to include it in your prototypes and
+** to compile it with the flag -std=c99.
 */
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)

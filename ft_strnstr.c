@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 14:24:15 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/08 08:32:44 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/13 06:37:44 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 **int	main(void)
 **{
 **	printf("====ft_strnstr====\n");
-**	printf("%s\n%p\n", ft_strnstr("42Seoul", "Seoul", 13), ft_strnstr("42Seoul", "Cadet", 13));
+**	printf("%s\n%p\n", ft_strnstr("42Seoul", "Seoul", 13),
+**				ft_strnstr("42Seoul", "Cadet", 13));
 **	printf("====strnstr====\n");
-**	printf("%s\n%p\n", strnstr("42Seoul", "Seoul", 13), strnstr("42Seoul", "Cadet", 13));
+**	printf("%s\n%p\n", strnstr("42Seoul", "Seoul", 13),
+**				strnstr("42Seoul", "Cadet", 13));
 **}
 */

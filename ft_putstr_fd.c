@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 06:19:30 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/10 06:19:34 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/13 06:39:10 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 ** void ft_putstr_fd(char *s, int fd);
 */
 
-void	ft_putstr_fd(char *s, int fd)
+void		ft_putstr_fd(char *s, int fd)
 {
 	size_t	i;
-	
+
 	if (s == NULL || fd < 0)
 		return ;
 	i = 0;
