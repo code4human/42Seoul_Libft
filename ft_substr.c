@@ -42,5 +42,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 **{
 **	printf("====ft_substr====\n");
 **	printf("%s\n", ft_substr("BornToSeoul", 2, 6));
+**	return (0);
 **}
 */

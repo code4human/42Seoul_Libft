@@ -38,5 +38,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 **{
 **	printf("====ft_strjoin====\n");
 **	printf("%s\n", ft_strjoin("From_LaPiscine_To_", "42Cursus"));
+**	return (0);
 **}
 */
