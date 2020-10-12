@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 03:03:05 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/13 06:39:51 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/13 06:59:12 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
 ** [PROTOTYPE]
 ** #include <string.h>
-** size_t	strlcpy(char *restrict dst, 
+** size_t	strlcpy(char *restrict dst,
 **					const char *restrict src, size_t dstsize);
 **
 ** [WARNING]
