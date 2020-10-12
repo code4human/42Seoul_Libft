@@ -50,7 +50,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	while (i < len && ft_is_occur(set, s1[i]))
 		i++;
-	while (len - 1 >= 0 && ft_is_occur(set, s1[len - 1]))
+	while ((len >= 1) && ft_is_occur(set, s1[len - 1]))
 		len--;
 	if ((len - 1) - i <= 0)
 		return (ft_strdup(""));
