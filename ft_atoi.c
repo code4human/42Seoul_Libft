@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include <stdlib.h>
 /*
 ** [PROTOTYPE]
 ** #include <stdlib.h>
@@ -57,7 +57,7 @@ int				ft_atoi(const char *nptr)
 	res = 0;
 	while (ft_is_white_space(nptr))
 		nptr++;
-	while (ft_is_plus_minus(nptr))
+	if (ft_is_plus_minus(nptr))
 	{
 		if (*nptr == '-')
 			sign *= -1;
@@ -72,16 +72,16 @@ int				ft_atoi(const char *nptr)
 	return (sign * res);
 }
 
-/*
-**int		main(void)
-**{
-**	printf("====ft_atoi====\n");
-**	printf("%d\n%d\n%d\n%d\n%d\n%d\n",
-**		ft_atoi("-283"), ft_atoi("  -+--283"), ft_atoi("283!20"),
-**      ft_atoi("283a30"), ft_atoi("a30"), ft_atoi("!@#"));
-**	printf("====atoi====\n");
-**	printf("%d\n%d\n%d\n%d\n%d\n%d\n",
-**		atoi("-283"), ft_atoi("  -+--283"), atoi("283!20"),
-**      atoi("283a30"), atoi("a30"), atoi("!@#"));
-**}
-*/
+
+int		main(void)
+{
+	printf("====ft_atoi====\n");
+	printf("%d\n%d\n%d\n%d\n%d\n%d\n",
+		ft_atoi("-283"), ft_atoi("  -+--283"), ft_atoi("283!20"),
+	      ft_atoi("283a30"), ft_atoi("a30"), ft_atoi("!@#"));
+	printf("====atoi====\n");
+	printf("%d\n%d\n%d\n%d\n%d\n%d\n",
+		atoi("-283"), atoi("  -+--283"), atoi("283!20"),
+	      atoi("283a30"), atoi("a30"), atoi("!@#"));
+}
+
