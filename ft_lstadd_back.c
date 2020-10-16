@@ -5,7 +5,7 @@
 ** void ft_lstadd_back(t_list **lst, t_list *new);
 **
 ** [PARAMETER]
-** #1. The address of a pointer to the first link of a list..
+** #1. The address of a pointer to the first link of a list.
 ** #2. The address of a pointer to the element to be add to the list.
 */
 
@@ -20,7 +20,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
-	last = ft_lstlast(*lst);
-	new->next = last->next;
+	last = *lst;
+	last = ft_lstlast(last);
 	last->next = new;
 }
