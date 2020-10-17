@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 16:38:55 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/17 16:38:58 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/17 17:37:30 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 ** [PARAMETER]
 ** #1. The address if a pointer to an element
 ** #2. The address of the function used to iterate on the list.
-** #3. The address of the function used to delete the content of an element if needed.
+** #3. The address of the function used to delete the content
+** of an element if needed.
 */
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
@@ -29,7 +30,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if ((lst == NULL) || (f == NULL) || (del == NULL))
 		return (NULL);
-	if (!(new = ft_lstnew((*f)(lst->content)));
+	if (!(new = ft_lstnew((*f)(lst->content))))
 		return (NULL);
 	curr = new;
 	lst = lst->next;

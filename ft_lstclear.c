@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 16:38:30 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/17 16:38:33 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/17 17:20:59 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	if ((lst == NULL) || (*lst == NULL) || (del == NULL))
 		return ;
 	curr = *lst;
-	while (*curr != NULL)
+	while (curr != NULL)
 	{
 		*lst = curr->next;
 		ft_lstdelone(curr, del);

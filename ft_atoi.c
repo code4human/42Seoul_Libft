@@ -6,12 +6,12 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 23:04:27 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/01 07:25:21 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/17 17:35:30 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
+
 /*
 ** [PROTOTYPE]
 ** #include <stdlib.h>
@@ -23,26 +23,26 @@
 ** with your library.
 */
 
-static	int		ft_is_white_space(const char *str)
+static	int		ft_is_white_space(const char *c)
 {
-	if (*str == ' ' || *str == '\n' || *str == '\r'
-			|| *str == '\t' || *str == '\f' || *str == '\v')
+	if (*c == ' ' || *c == '\n' || *c == '\r'
+			|| *c == '\t' || *c == '\f' || *c == '\v')
 		return (1);
 	else
 		return (0);
 }
 
-static	int		ft_is_plus_minus(const char *str)
+static	int		ft_is_plus_minus(const char *c)
 {
-	if (*str == '+' || *str == '-')
+	if (*c == '+' || *c == '-')
 		return (1);
 	else
 		return (0);
 }
 
-static	int		ft_is_number(const char *str)
+static	int		ft_is_number(const char *c)
 {
-	if (*str >= '0' && *str <= '9')
+	if (*c >= '0' && *c <= '9')
 		return (1);
 	else
 		return (0);
@@ -63,7 +63,7 @@ int				ft_atoi(const char *nptr)
 			sign *= -1;
 		nptr++;
 	}
-	while (ft_is_number(nptr))
+	while (ft_isdigit(nptr))
 	{
 		res *= 10;
 		res += (*nptr - '0');
@@ -72,16 +72,16 @@ int				ft_atoi(const char *nptr)
 	return (sign * res);
 }
 
-
-int		main(void)
-{
-	printf("====ft_atoi====\n");
-	printf("%d\n%d\n%d\n%d\n%d\n%d\n",
-		ft_atoi("-283"), ft_atoi("  -+--283"), ft_atoi("283!20"),
-	      ft_atoi("283a30"), ft_atoi("a30"), ft_atoi("!@#"));
-	printf("====atoi====\n");
-	printf("%d\n%d\n%d\n%d\n%d\n%d\n",
-		atoi("-283"), atoi("  -+--283"), atoi("283!20"),
-	      atoi("283a30"), atoi("a30"), atoi("!@#"));
-}
-
+/*
+**int		main(void)
+**{
+**	printf("====ft_atoi====\n");
+**	printf("%d\n%d\n%d\n%d\n%d\n%d\n",
+**		ft_atoi("-283"), ft_atoi("  -+--283"), ft_atoi("283!20"),
+**	      ft_atoi("283a30"), ft_atoi("a30"), ft_atoi("!@#"));
+**	printf("====atoi====\n");
+**	printf("%d\n%d\n%d\n%d\n%d\n%d\n",
+**		atoi("-283"), atoi("  -+--283"), atoi("283!20"),
+**	      atoi("283a30"), atoi("a30"), atoi("!@#"));
+**}
+*/
