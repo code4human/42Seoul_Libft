@@ -61,7 +61,7 @@ $(TARGET) : $(OBJS)
 	$(AR) $@ $^
 
 .c.o :
-	$(CC) $(CFLAGS) -c $< -o ${<:.c=.o}
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 norm :
 	norminette -R CheckForbiddenSourceHeader 
