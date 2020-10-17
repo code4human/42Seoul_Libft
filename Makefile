@@ -15,7 +15,7 @@ CFLAGS  = -Wall -Wextra -Werror
 AR	= ar rc
 RM	= rm -f
 
-TARGET	= libft.a
+NAME	= libft.a
 
 SRCS	= ./ft_memset.c \
 	  ./ft_bzero.c \
@@ -55,9 +55,9 @@ SRCS	= ./ft_memset.c \
 
 OBJS = $(SRCS:.c=.o)
 
-all : $(TARGET)
+all : $(NAME)
 
-$(TARGET) : $(OBJS)
+$(NAME) : $(OBJS)
 	$(AR) $@ $^
 
 .c.o :
@@ -70,6 +70,6 @@ clean :
 	$(RM) $(OBJS)
 
 fclean : clean
-	$(RM) $(TARGET)
+	$(RM) $(NAME)
 
 re : fclean all
