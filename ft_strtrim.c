@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 06:17:25 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/13 06:15:55 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/17 21:14:01 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,10 @@ char			*ft_strtrim(char const *s1, char const *set)
 		len--;
 	if ((len - 1) - i <= 0)
 		return (ft_strdup(""));
-	s2 = (char *)malloc(sizeof(char) * ((len - 1) - i) + 1);
+	s2 = (char *)malloc(sizeof(char) * (len - i + 1));
 	if (!(s2))
 		return (NULL);
-	ft_strlcpy(s2, (s1 + i), (len - 1) - i + 1);
+	ft_strlcpy(s2, (s1 + i), len - i + 1);
 	return (s2);
 }
 
