@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 14:23:42 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/13 06:38:25 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/17 20:29:59 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,14 @@
 ** char	*strchr(const char *s, int c);
 */
 
-char	*ft_strchr(const char *s, int c)
+char		*ft_strchr(const char *s, int c)
 {
-	int	i;
+	int		i;
+	char	*char_s;
 
+	char_s = (char *)s;
+	if ((char)c == '\0')
+		return (char_s + ft_strlen(char_s));
 	i = 0;
 	while (s[i] != '\0')
 	{

@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 06:16:40 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/13 06:21:44 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/17 19:59:00 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,12 @@ void				*ft_memmove(void *dst, const void *src, size_t len)
 
 	char_dst = (unsigned char *)dst;
 	char_src = (unsigned char *)src;
-	i = 0;
-	while (i < len)
-	{
+	i = -1;
+	while (++i < len)
 		temp_array[i] = char_src[i];
+	i = -1;
+	while (++i < len)
 		char_dst[i] = temp_array[i];
-		i++;
-	}
 	return (dst);
 }
 

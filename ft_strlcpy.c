@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 03:03:05 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/13 06:59:12 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/17 19:53:26 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,15 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t srcsize;
 
 	srcsize = ft_strlen(src);
+	if (dstsize < 1)
+		return (srcsize);
 	i = 0;
-	while ((i < srcsize) && (i <= dstsize - 1))
+	while ((i < srcsize) && (i < dstsize - 1))
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	if (!(dstsize == 0))
-		dst[dstsize] = '\0';
+	dst[i] = '\0';
 	return (srcsize);
 }
 

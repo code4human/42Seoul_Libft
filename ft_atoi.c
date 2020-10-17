@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 23:04:27 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/17 17:35:30 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/17 18:11:53 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int				ft_atoi(const char *nptr)
 			sign *= -1;
 		nptr++;
 	}
-	while (ft_isdigit(nptr))
+	while (ft_is_number(nptr))
 	{
 		res *= 10;
 		res += (*nptr - '0');
