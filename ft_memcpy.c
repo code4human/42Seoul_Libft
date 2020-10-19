@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 14:22:26 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/13 06:30:15 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/19 23:54:37 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ void				*ft_memcpy(void *dst, const void *src, size_t n)
 
 	char_dst = (unsigned char *)dst;
 	char_src = (unsigned char *)src;
+	if ((char_dst == NULL) && (char_src == NULL))
+		return (NULL);
 	i = 0;
 	while (i < n)
 	{
