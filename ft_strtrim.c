@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 06:17:25 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/17 21:14:01 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/19 22:57:49 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,18 @@ static	bool	ft_is_occur(char const *set, char const c)
 	return (false);
 }
 
+static	bool	ft_is_blank(int i, int len, char **s3)
+{
+	if (i >= len)
+	{
+		if (!(*s3 = (char *)malloc(sizeof(char))))
+			return (false);
+		*s3[0] = 0;
+		return (true);
+	}
+	return (false);
+}
+
 char			*ft_strtrim(char const *s1, char const *set)
 {
 	size_t		i;
@@ -50,6 +62,8 @@ char			*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	while (i < len && ft_is_occur(set, s1[i]))
 		i++;
+	if (ft_is_blank(i, len, &s2) == true)
+		return (s2);
 	while ((len >= 1) && ft_is_occur(set, s1[len - 1]))
 		len--;
 	if ((len - 1) - i <= 0)
