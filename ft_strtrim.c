@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 06:17:25 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/19 23:09:38 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/19 23:45:08 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static	bool	ft_is_blank(int i, int len, char **s3)
 	{
 		if (!(*s3 = (char *)malloc(sizeof(char))))
 			return (false);
-		*s3[0] = '\0';
+		**s3 = '\0';
 		return (true);
 	}
 	return (false);
