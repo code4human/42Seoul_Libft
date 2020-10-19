@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 12:41:29 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/13 05:58:30 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/20 01:54:03 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,14 @@
 
 void				*ft_calloc(size_t count, size_t size)
 {
-	size_t			i;
 	void			*res;
 	unsigned char	*char_res;
-
-	res = malloc(count * size);
-	if (!(res))
+	
+	if (!(res = malloc(count * size)))
 		return (NULL);
-	char_res = res;
-	i = 0;
-	while (i < count)
-	{
-		char_res[i] = 0;
-		i++;
-	}
-	return (char_res);
+	char_res = (unsigned char *)res;
+	ft_bzero(char_res, (count * size));
+	return (res);
 }
 
 /*

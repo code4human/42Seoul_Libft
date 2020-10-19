@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 16:38:55 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/19 23:29:29 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/20 01:57:57 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new;
 	t_list	*curr;
 
-	if ((lst == NULL) || (f == NULL) || (del == NULL))
+	if ((lst == NULL) || (f == NULL))
 		return (NULL);
 	if (!(new = ft_lstnew((*f)(lst->content))))
 		return (NULL);
