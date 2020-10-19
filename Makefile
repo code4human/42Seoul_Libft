@@ -6,7 +6,7 @@
 #    By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/13 04:36:24 by taeekim           #+#    #+#              #
-#    Updated: 2020/10/17 17:19:02 by taeekim          ###   ########.fr        #
+#    Updated: 2020/10/20 02:44:30 by taeekim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,5 +88,8 @@ bclean :
 
 fclean : clean
 	$(RM) $(NAME)
+
+bfclean : bclean
+	$(RM) bonus
 
 re : fclean all
