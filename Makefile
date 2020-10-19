@@ -72,7 +72,7 @@ $(NAME) : $(OBJS)
 	$(AR) $@ $^
 
 bonus : $(OBJS) $(OBJS_BONUS)
-	$(AR) $@ $^ $(OBJS_BONUS)
+	$(AR) $@ $(NAME) $(OBJS_BONUS)
 
 .c.o :
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
@@ -81,15 +81,12 @@ norm :
 	norminette -R CheckForbiddenSourceHeader 
 
 clean :
-	$(RM) $(OBJS)
-
-bclean :
-	$(RM) $(OBJS_BONUS)
+	$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean : clean
 	$(RM) $(NAME)
 
-bfclean : bclean
-	$(RM) bonus
+bfclean : clean
+	$(RM) $(NAME) bonus
 
 re : fclean all
