@@ -6,7 +6,7 @@
 #    By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/13 04:36:24 by taeekim           #+#    #+#              #
-#    Updated: 2020/10/20 02:44:30 by taeekim          ###   ########.fr        #
+#    Updated: 2020/10/20 03:56:12 by taeekim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,7 @@ $(NAME) : $(OBJS)
 	$(AR) $@ $^
 
 bonus : $(OBJS) $(OBJS_BONUS)
-	$(AR) $@ $^ $(OBJS_BONUS)
+	$(AR) $(NAME) $^ $(OBJS_BONUS)
 
 .c.o :
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
