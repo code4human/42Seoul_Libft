@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 06:17:41 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/13 07:10:32 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/20 12:38:51 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ static char		**ft_malloc_error(char **result)
 	while (result[idx2])
 	{
 		free(result[idx2]);
+		result[idx2] = 0;
 		idx2++;
 	}
 	free(result);
