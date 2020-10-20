@@ -11,8 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
+
 /*
 ** [PROTOTYPE]
 ** #include <string.h>
@@ -41,19 +40,19 @@ void				*ft_memmove(void *dst, const void *src, size_t len)
 	return (dst);
 }
 
-
-int	main(void)
-{
-	char	chars1[] = "42Seoul is very good......";
-	char	chars2[] = "42Seoul is very good......";
-
-	printf("====42Seoul is very very good.====\n");
-	printf("====ft_memmove====\n");
-	ft_memmove(chars1 + 16, chars1 + 11, 9);
-	printf("%s\n", chars1);
-	printf("====memmove====\n");
-	memmove(chars2 + 16, chars2 + 11, 9);
-	printf("%s\n", chars2);
-	return (0);
-}
-
+/*
+**int	main(void)
+**{
+**	char	chars1[] = "42Seoul is very good......";
+**	char	chars2[] = "42Seoul is very good......";
+**
+**	printf("====42Seoul is very very good.====\n");
+**	printf("====ft_memmove====\n");
+**	ft_memmove(chars1 + 16, chars1 + 11, 9);
+**	printf("%s\n", chars1);
+**	printf("====memmove====\n");
+**	memmove(chars2 + 16, chars2 + 11, 9);
+**	printf("%s\n", chars2);
+**	return (0);
+**}
+*/
