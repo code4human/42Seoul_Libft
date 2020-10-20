@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 06:17:25 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/19 23:45:08 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/20 12:35:49 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ char			*ft_strtrim(char const *s1, char const *set)
 	if (s1 == NULL)
 		return (NULL);
 	if (set == NULL)
-		return ((char *)s1);
+		return (ft_strdup(s1));
 	len = ft_strlen(s1);
 	i = 0;
 	while (i < len && ft_is_occur(set, s1[i]))
