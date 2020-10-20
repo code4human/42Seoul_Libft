@@ -30,7 +30,7 @@ static char		**ft_malloc_error(char **result)
 	while (result[idx2])
 	{
 		free(result[idx2]);
-		result[idx2] = 0;
+		result[idx2] = NULL;
 		idx2++;
 	}
 	free(result);
