@@ -6,7 +6,7 @@
 /*   By: taeekim <taeekim@42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 06:16:56 by taeekim           #+#    #+#             */
-/*   Updated: 2020/10/13 06:18:08 by taeekim          ###   ########.fr       */
+/*   Updated: 2020/10/20 12:54:26 by taeekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	s_len;
 	char	*substring;
 
-	substring = (char *)malloc(sizeof(char) * (len + 1));
-	if ((s == NULL) || (!(substring)))
+	if (s == NULL)
+		return (NULL);
+	if (!(substring = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	s_len = ft_strlen(s);
 	i = 0;
