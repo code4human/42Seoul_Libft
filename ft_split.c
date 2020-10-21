@@ -43,7 +43,7 @@ static size_t	ft_word_break(char const *s, char c)
 	size_t		n_break;
 
 	idx1 = 0;
-	n_break = 1;
+	n_break = 0;
 	while (s[idx1])
 	{
 		if (s[idx1] == c)
