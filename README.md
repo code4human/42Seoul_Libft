@@ -5,14 +5,14 @@ success (115 / 100)
 
 ![Score](https://user-images.githubusercontent.com/49941913/96693295-072e7380-13c2-11eb-81c2-2dcb4e5ce3ab.png)
 
-<br>
+
 
 ### ♠ The aim of this project
 Libft is your very first own library in 42cursus.
 <br>
 The aim of this project is to code a C library regrouping usual functions that you'll be allowed to use in all your other projects.
 
-<br>
+
 
 ### ♠ Subject
 - **Mandatory Part 1**
@@ -46,14 +46,14 @@ ft_lstdelone ft_lstclear
 ft_lstiter ft_lstmap
 ```
 
-<br>
+
 
 ### ♠ Libft Tester
-1. [__Libftest__](https://github.com/jtoty/Libftest) by jtoty
+##### 1. [__Libftest__](https://github.com/jtoty/Libftest) by jtoty
 ![Libftest](https://user-images.githubusercontent.com/49941913/96693032-b9197000-13c1-11eb-8c5b-33986e59c4e9.png)
 
-2. [__libft-unit-test__](https://github.com/alelievr/libft-unit-test) by alelievr
+##### 2. [__libft-unit-test__](https://github.com/alelievr/libft-unit-test) by alelievr
 ![libft-unit-test](https://user-images.githubusercontent.com/49941913/96693151-d8180200-13c1-11eb-82ba-b59636bc57a4.png)
 
-3. [__libft-war-machine__](https://github.com/ska42/libft-war-machine) by ska42
+##### 3. [__libft-war-machine__](https://github.com/ska42/libft-war-machine) by ska42
 ![libft-war-machine](https://user-images.githubusercontent.com/49941913/96693210-e82fe180-13c1-11eb-8bc4-a4ea7013e1bc.png)
