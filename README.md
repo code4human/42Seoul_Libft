@@ -1,8 +1,7 @@
 # [42Seoul] Libft
 
 ### ♠ Score
-success (115 / 100) 
-
+success (115 / 100) <br>
 ![Score](https://user-images.githubusercontent.com/49941913/96693295-072e7380-13c2-11eb-81c2-2dcb4e5ce3ab.png)
 
 
