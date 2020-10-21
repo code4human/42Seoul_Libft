@@ -43,7 +43,7 @@ static size_t	ft_word_break(char const *s, char c)
 	size_t		n_break;
 
 	idx1 = 0;
-	n_break = 0;
+	n_break = 1;
 	while (s[idx1])
 	{
 		if (s[idx1] == c)
@@ -111,6 +111,7 @@ char			**ft_split(char const *s, char c)
 	n_break = ft_word_break(s, c);
 	if (!(result = (char **)malloc(sizeof(char *) * (n_break + 1))))
 		return (NULL);
+	result[n_break + 1] = NULL;
 	ft_word_malloc(result, n_break, s, c);
 	return (result);
 }
