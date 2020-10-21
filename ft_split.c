@@ -111,7 +111,7 @@ char			**ft_split(char const *s, char c)
 	n_break = ft_word_break(s, c);
 	if (!(result = (char **)malloc(sizeof(char *) * (n_break + 1))))
 		return (NULL);
-	result[n_break + 1] = NULL;
+	result[n_break] = NULL;
 	ft_word_malloc(result, n_break, s, c);
 	return (result);
 }
