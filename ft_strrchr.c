@@ -23,6 +23,8 @@ char		*ft_strrchr(const char *s, int c)
 	size_t	s_len;
 	char	*char_s;
 
+	if (s == NULL)
+		return (NULL);
 	char_s = (char *)s;
 	if ((char)c == '\0')
 		return (char_s + ft_strlen(char_s));
