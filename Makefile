@@ -12,7 +12,7 @@
 
 CC      = gcc
 CFLAGS  = -Wall -Wextra -Werror
-AR	= ar rc
+AR	= ar cr
 RM	= rm -f
 
 NAME	= libft.a
