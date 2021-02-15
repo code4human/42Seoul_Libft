@@ -12,8 +12,9 @@
 
 CC      = gcc
 CFLAGS  = -Wall -Wextra -Werror
-AR	= ar cr
-RM	= rm -f
+AR		= ar
+ARFLAGS = cr
+RM		= rm -f
 
 NAME	= libft.a
 
@@ -69,10 +70,10 @@ OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	$(AR) $@ $^
+	$(AR) $(ARFLAGS) $@ $^
 
 bonus : $(OBJS_BONUS)
-	$(AR) $(NAME) $^
+	$(AR) $(ARFLAGS) $(NAME) $^
 
 .c.o :
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
