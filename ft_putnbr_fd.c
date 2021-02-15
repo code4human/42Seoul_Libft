@@ -21,7 +21,7 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	if (fd < 0)
 		return ;
-	if (n == -2147483648)
+	if (n == INT_MIN_STR)
 	{
 		ft_putnbr_fd(-2, fd);
 		ft_putnbr_fd(147483648, fd);
@@ -44,9 +44,9 @@ void	ft_putnbr_fd(int n, int fd)
 **{
 **	printf("====ft_putnbr_fd====\n");
 **	printf("====MIN_OF_INT====\n");
-**	ft_putnbr_fd(-2147483648, 1);
+**	ft_putnbr_fd(INT_MIN_STR, 1);
 **	printf("\n====MAX_OF_INT====\n");
-**	ft_putnbr_fd(2147483647, 1);
+**	ft_putnbr_fd(INT_MAX_STR, 1);
 **	printf("\n");
 **	return (0);
 **}
